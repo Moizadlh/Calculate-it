@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE CALCULATOR</title>
+    <style>
+        body{
+            background-color: rgb(48, 241, 145);
+          }
+
+          #fullwindow{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+          }
+          
+          #calculator {
+              width: 400px;
+              /* height: 570px; */
+              /* margin: 100px auto; */
+              background-color: #797373;
+              color: white;
+              border-radius: 10px;
+              border-radius: 20px;
+              
+            }
+          
+            .display {
+              width: 100%;
+              height: 80px;
+              background-color: #4e5a49;
+              font-size: 36px;
+              text-align: right;
+              padding: 20px;
+              box-sizing: border-box;
+             border-top-right-radius: 20px;
+             border-top-left-radius: 20px;
+             font-weight: bolder;
+             font-family: cursive;
+            }
+          
+            .buttons {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              grid-gap: 15px;
+              padding: 18px;
+            }
+          
+            button {
+              width: 100%;
+              height: 70px;
+              font-size: 24px;
+              background-color: #fff;
+              color: #333;
+              border-radius: 5px;
+              border: none;
+              cursor: pointer;
+              filter: drop-shadow(10px 10px 10px rgb(19, 24, 19));
+              font-weight: bolder;
+            }
+            button:hover{
+              transform: scale(1.05);
+            }
+          
+            .operator {
+              background-color: #f39c12;
+              color: #fff;
+            }
+
+            @media screen and (max-width : 500px) {
+              .buttons{
+                grid-gap: 10px;
+              }
+              #calculator {
+               width: 300px;
+              }
+              #fullwindow{
+                margin-top: 10px;
+              }
+            }
+    </style>
+</head>
+<body>
+  <div id="fullwindow">
+    <div id="calculator">
+      <input type="text" class="display" placeholder="0" readonly>
+      <div class="buttons">
+          <button class="operator" value="clear">C</button>
+          <button class="operator" value="backspace" id="backspace">&lAarr;</button>
+          <button class="operator" value="square">^</button>
+          <button class="operator" value="add">+</button>
+          <button class="number">7</button>
+          <button class="number">8</button>
+          <button class="number">9</button>
+          <button class="operator" value="subtract">-</button>
+          <button class="number">4</button>
+          <button class="number">5</button>
+          <button class="number">6</button>
+          <button class="operator" value="multiply">*</button>
+          <button class="number">1</button>
+          <button class="number">2</button>
+          <button class="number">3</button>
+          <button class="operator" value="divide">/</button>
+          <button class="number" >00</button>
+          <button class="number">0</button>
+          <button class="operator" value=".">.</button>
+          <button class="operator" value="equal">=</button>
+      </div>
+  </div>
+  </div>
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
+</html>
